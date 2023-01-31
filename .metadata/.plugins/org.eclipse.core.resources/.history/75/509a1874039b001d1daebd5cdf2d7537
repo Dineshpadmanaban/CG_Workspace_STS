@@ -1,0 +1,5 @@
+package onetomanyprogram.dao;
+
+public class DepartmentDao {
+
+}

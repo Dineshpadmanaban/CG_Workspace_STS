@@ -1,0 +1,5 @@
+package onetooneprogramhibernate.config;
+
+public class HibernateConfig {
+
+}

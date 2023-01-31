@@ -1,0 +1,5 @@
+package onetomanyprogram.config;
+
+public class HibernateConfig {
+
+}

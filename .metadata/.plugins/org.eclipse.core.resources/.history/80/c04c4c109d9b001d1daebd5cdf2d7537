@@ -1,0 +1,38 @@
+package onetomanyprogram;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+
+import onetomanyprogram.dao.EmployeeDao;
+import onetomanyprogram.entity.Department;
+import onetomanyprogram.entity.Employee;
+
+public class OnetoManyExample {
+	
+		
+		public static void main(String[] args) throws ParseException {
+			
+			Department dept1  = new Department("HR");
+			Department dept2  = new Department("Account");
+			ArrayList<Department> listDepts = new ArrayList<Department>();
+			listDepts.add(dept1);
+			listDepts.add(dept2);
+			
+			Employee emp = new Employee();
+			emp.setEmpName("Krishna");
+			emp.setEmpDOB(new SimpleDateFormat("yyyy-MM-dd").parse("1999-11-15"));
+			emp.setEmpDOJ(new SimpleDateFormat("yyyy-MM-dd").parse("2021-11-15"));
+			emp.setDepartments(listDepts);
+			
+			//save the emp
+			EmployeeDao empDao = new EmployeeDao();
+			empDao.insertEmployee(emp);
+			
+		}
+
+	}
+
+
+

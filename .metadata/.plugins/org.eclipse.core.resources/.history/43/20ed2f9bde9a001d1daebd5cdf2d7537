@@ -1,0 +1,5 @@
+package onetoonebookprogram.entity;
+
+public class Book {
+
+}

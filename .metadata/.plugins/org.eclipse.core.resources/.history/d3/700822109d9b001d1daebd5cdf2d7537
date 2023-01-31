@@ -1,0 +1,91 @@
+package onetomanyprogram.entity;
+
+import java.util.Date;
+
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "employee_info")
+
+
+public class Employee {
+		
+		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		@Column(name = "emp_id")
+		private Long empId;
+		
+		@Column(name = "emp_name")
+		private String empName;
+		
+		@Column(name = "emp_dob")
+		private Date empDOB;
+		
+		@Column(name = "emp_doj")
+		private Date empDOJ;
+		
+		@OneToMany(cascade = CascadeType.ALL)
+		private List<Department> departments = new ArrayList<Department>();
+		
+		public Employee() {
+			// TODO Auto-generated constructor stub
+		}
+
+		//generate getter and setters for departments
+		public List<Department> getDepartments() {
+			return departments;
+		}
+
+		public void setDepartments(List<Department> departments) {
+			this.departments = departments;
+		}
+
+
+		public Employee(String empName, Date empDOB, Date empDOJ) {
+			super();
+			this.empName = empName;
+			this.empDOB = empDOB;
+			this.empDOJ = empDOJ;
+		}
+
+		public Long getEmpId() {
+			return empId;
+		}
+
+		public void setEmpId(Long empId) {
+			this.empId = empId;
+		}
+
+		public String getEmpName() {
+			return empName;
+		}
+
+		public void setEmpName(String empName) {
+			this.empName = empName;
+		}
+
+		public Date getEmpDOB() {
+			return empDOB;
+		}
+
+		public void setEmpDOB(Date empDOB) {
+			this.empDOB = empDOB;
+		}
+
+		public Date getEmpDOJ() {
+			return empDOJ;
+		}
+
+		public void setEmpDOJ(Date empDOJ) {
+			this.empDOJ = empDOJ;
+		}
+
+	}
+

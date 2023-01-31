@@ -1,0 +1,7 @@
+package onetooneBookandAuthor.entitiy;
+
+public @interface Table {
+
+	String name();
+
+}

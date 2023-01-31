@@ -1,0 +1,5 @@
+package onetooneBookandAuthor.entitiy;
+
+public class BookandAuthor {
+
+}

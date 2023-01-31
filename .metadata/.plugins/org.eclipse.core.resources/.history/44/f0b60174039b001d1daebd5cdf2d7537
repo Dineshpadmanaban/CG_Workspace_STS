@@ -1,0 +1,5 @@
+package onetomanyprogram.entity;
+
+public class Department {
+
+}

@@ -1,0 +1,5 @@
+package onetooneprogram.entity;
+
+public class InstructorDetails {
+
+}
